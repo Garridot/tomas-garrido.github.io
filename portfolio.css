@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&family=Square+Peg&family=Water+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300&family=Open+Sans:ital,wght@1,300&family=Square+Peg&family=Water+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300&family=Noto+Sans&family=Open+Sans:ital,wght@1,300&family=Square+Peg&family=Water+Brush&display=swap');
+:root{
+    --font-strong:    700;
+    --color-strong: #515769;
+    --line-strong:    1.4;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    font-family: SuisseIntl,Helvetica Neue,helvetica,arial,sans-serif;    
+    font-family: Hind,sans-serif;   
+    margin: 0 0 15px;    
+}
+h1, h2, h3, h4, h5, h6,p{
+    color: black;
+}
+
+a{
+    transition: all 0.1s;
+}
+a:hover{
+    color: white;
+    text-decoration: 5px underline !important;
+}
+
+strong{
+    font-weight: var(--font-strong);
+    color:       var(--color-strong);
+    line-height: var(--line-strong);
+    text-decoration: underline;
+}
+
+
+ nav{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    align-items: baseline;
+    position: fixed;
+    right: 0;
+    padding: 1rem 3rem;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+
+nav h2{
+    font-family: 'Square Peg', cursive;
+    font-size: 2.2rem;
+    color: white;
+
+    
+}
+
+nav .icon-menu{
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+nav ul{
+    list-style: none;  
+    display:    flex;  
+    
+}
+
+nav ul li{
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+}
+nav ul li a{
+    font-weight:     600;
+    font-size:       .9em;
+    margin-left:     10px;
+    display:         inline-block;
+    padding:         8px 24px;
+    text-decoration: none;
+    color:         white;
+}
+
+
+@media(max-width:1192px){
+    nav ul li a{
+        padding:  8px 16px;
+    }
+}
+
+@media(max-width:1000px){
+    nav{
+        padding: 2rem 1rem;
+    }
+    nav ul{
+        display: none;
+
+    }
+    nav ul.menu.view{
+        position: fixed;
+        display: flex;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0
+        ;
+            
+    }
+    nav ul li{
+        margin: 10px 0;
+        font-size: 2.5rem;        
+    }
+    nav ul li a{
+        color: rgb(24, 28, 37);
+       
+    }
+    
+    nav .icon-menu{
+        display: block; 
+        z-index: 1000;       
+    }
+    nav .icon-menu.clicked{
+        color: rgb(24, 28, 37);       
+    }
+} 
+
+
+
+
+
+@media(width:1130px){
+    main .introduce h1{
+        font-size: 9rem !important;        
+    }
+}
+
+
+
+@media(min-width:1000px){
+    nav{
+        padding: 3rem;
+    }
+    nav h2{
+        font-size: 3rem;
+    }
+
+
+    main .introduce{         
+        transform: translateY(-20%); 
+        padding-left: 0 !important;
+    }
+    main .introduce h1{
+        font-size: 8rem !important;        
+    }
+    main .introduce h2{
+        font-size: 4rem !important;
+        padding-left: .9rem;
+    }
+
+    .perfil{
+        display: flex !important;
+    }
+
+
+    .perfil,main{
+        padding: 0 3rem !important;
+    }
+    .perfil p#title{
+        font-size: 6rem !important;
+    }
+
+    .proj .text {        
+        flex: 0 0 auto;
+        width: 50% !important; 
+        margin: 0 !important;
+        padding-left: 3rem;           
+    }
+
+    .proj._main .text{
+        width: 100%  !important;  
+        text-align: center !important;  
+        padding-left: 0 !important;            
+    }
+
+    
+    .proj .text h1{        
+        
+        font-size: 8.6rem !important;
+        line-height: .9;
+        letter-spacing: -.04em;
+    }
+
+    .proj .text a:hover{
+        text-decoration:underline 10px !important ;
+    }
+
+
+    .contact ul{        
+        flex-direction:inherit !important;       
+    
+    }
+    .contact ul li{
+        padding: 0 3rem;
+    }
+
+    
+
+    
+}
+
+
+@media(max-width:1000px){
+    nav{
+        padding: 3rem;
+    }
+    nav h2{
+        font-size: 3rem;
+    }
+
+    main .introduce{         
+        transform: translateY(-20%); 
+        padding-left: 0rem !important;
+    }
+    main .introduce h1{
+        font-size: 8rem !important;        
+    }
+    main .introduce h2{
+        font-size: 4rem !important;
+        padding-left: .9rem;
+    }
+    
+
+    .perfil,main{
+        padding: 0 3rem !important;
+    }
+    .perfil p#title{
+        font-size: 6rem !important;
+    }
+
+
+    .proj .text {        
+        flex: 0 0 auto;
+        width: 50% !important; 
+        margin: 0 !important;
+        padding-left: 3rem;           
+    }
+
+    .proj._main .text{
+        width: 100%  !important;  
+        text-align: center !important;  
+        padding-left: 0 !important;            
+    }
+
+    
+    .proj .text h1{        
+        
+        font-size: 8.6rem !important;
+        line-height: .9;
+        letter-spacing: -.04em;
+    }
+
+    
+}
+
+
+
+@media(max-width:800px){
+    .proj .text h1,
+    .perfil p#title,
+    main .introduce h1{
+        font-size: 4.6rem !important;
+    }
+}
+
+
+
+@media(max-width:600px){
+
+    nav {
+        padding: 2rem 1rem;
+    }
+    
+    main .introduce{        
+        transform: translateY(0%) !important;
+        
+    }
+    main .introduce h1{
+        font-size: 4rem !important;
+    }
+    main .introduce h2{
+        font-size: calc(1.325rem + .9vw) !important
+    }
+
+
+    .perfil, main {
+        padding: 0 1rem !important;
+    }
+    .perfil p#title {
+        font-size: 3rem !important;
+    }
+
+    .proj .text{
+        width: 90% !important;
+        /* margin: auto !important; */
+        padding-left:  1rem !important; 
+    }
+
+    .proj .text h1 {
+        font-size: 3.5rem !important;        
+    }
+
+}
+
+
+
+main{
+    background: rgb(24, 28, 37); 
+    height: 100vh;    
+}
+main .introduce{
+    padding-top: 70vh;    
+    padding-left: 1rem;
+    transform: translateY(-20%);
+    
+}
+main .introduce h1{
+    font-size: 4rem;
+}
+main .introduce h1,main .introduce h2{
+    color: rgb(255, 255, 255);
+}
+
+
+
+
+/* SECTION Perfil */
+
+
+
+.perfil{
+    padding:0 1rem;
+    height: 100vh;
+    display: block;
+    align-items: center
+}
+.perfil p#title{
+    font-size: 3rem;
+    margin: 5rem 0;
+    line-height: 1.1;
+    font-weight: 600;
+    word-spacing: 0.1em;
+    letter-spacing: -.02em;
+}
+.perfil p{
+    font-size: 1rem;   
+    line-height: 1.55;
+    margin: 0 0 5rem;
+}
+.perfil .data  ul{
+    padding: 0;
+}
+.perfil .data  li{
+    list-style: none;
+    font-size: 1.2rem;
+    border: 1px solid #babecc;
+    border-radius: 5px;
+    margin:  0.5rem;
+    padding: .2rem 1rem;
+    font-weight: var(--font-strong);    
+    line-height: var(--line-strong);
+}
+
+@media(max-width:1002px){
+    .data ul{
+        display: block !important;        
+    }
+}
+
+
+
+
+.projects{    
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+    margin: 0;   
+    padding: 0;    
+} 
+
+
+.proj{    
+    
+    top: 0;
+    margin: 0;
+    padding: 0;  
+    transition: all .2s; 
+    width: 100%;
+    height: 800px;    
+    display: table;  
+    max-width: 100%;  
+    
+}
+
+
+
+.proj .text {
+    position: relative;
+    color: black;
+    display: block;   
+    padding-top: 9.48rem;
+    transition: all .2s;    
+    width: 90%;
+    margin: auto;   
+}
+
+.proj .text h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: .9;
+    letter-spacing: -.04em;
+}
+.proj .text a{
+    text-decoration: none;
+    color: black;
+}
+
+.proj .text p{
+    text-align: justify;
+}
+
+
+
+.contact{
+    background: black;
+    height: 100vh;
+}
+.contact h1{
+    text-align: center;
+    font-size: 3.5rem;
+    padding: 5rem 0 0.5rem;    
+}
+
+.contact h1,.contact h6,.contact a{
+    color: white;
+}
+.contact a{
+    font-size: 2rem;
+    line-height: 1.4;
+    font-weight: 600;
+    word-spacing: 0.1em;
+    /* letter-spacing: -.02em; */
+    text-decoration: none;
+}
+
+.contact ul{
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+
+}
+
+.contact ul li{
+    list-style: none;
+}
+
+
+
+
+
+
