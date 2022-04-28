@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&family=Square+Peg&family=Water+Brush&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300&family=Open+Sans:ital,wght@1,300&family=Square+Peg&family=Water+Brush&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300&family=Noto+Sans&family=Open+Sans:ital,wght@1,300&family=Square+Peg&family=Water+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300&family=Noto+Sans&family=Open+Sans:ital,wght@1,300&family=Roboto+Condensed:wght@300&family=Square+Peg&family=Water+Brush&display=swap');
+
 :root{
     --font-strong:    700;
     --color-strong: #515769;
@@ -19,11 +21,13 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 0 15px;    
 }
 h1, h2, h3, h4, h5, h6,p{
-    color: black;
+    color: black;   
+    
 }
 
 a{
     transition: all 0.1s;
+    
 }
 a:hover{
     color: white;
@@ -48,13 +52,14 @@ strong{
     padding: 1rem 3rem;
     left: 0;
     top: 0;
-    z-index: 100;
+    z-index: 50000;
 }
 
 nav h2{
-    font-family: 'Square Peg', cursive;
-    font-size: 2.2rem;
+    font-family: 'Square Peg', cursive;    
+    font-size: 2rem;
     color: white;
+    
 
     
 }
@@ -137,6 +142,8 @@ nav ul li a{
 
 
 
+
+
 @media(width:1130px){
     main .introduce h1{
         font-size: 9rem !important;        
@@ -155,11 +162,11 @@ nav ul li a{
 
 
     main .introduce{         
-        transform: translateY(-20%); 
+        transform: translateY(-10%) !important; 
         padding-left: 0 !important;
     }
     main .introduce h1{
-        font-size: 8rem !important;        
+        font-size: calc(4.375rem + 1.5vw) !important;    
     }
     main .introduce h2{
         font-size: 4rem !important;
@@ -286,7 +293,10 @@ nav ul li a{
 @media(max-width:600px){
 
     nav {
-        padding: 2rem 1rem;
+        padding:  1rem;
+    }
+    nav h2{
+        font-size: 2.5rem;
     }
     
     main .introduce{   
@@ -355,7 +365,8 @@ main .introduce h1,main .introduce h2{
     padding:0 1rem;
     height: 100vh;
     display: block;
-    align-items: center
+    align-items: center;
+    
 }
 .perfil p#title{
     font-size: 3rem;
@@ -396,27 +407,26 @@ main .introduce h1,main .introduce h2{
 .projects{    
     display: flex;
     flex-direction: column; 
+    
     width: 100%;
     margin: 0;   
     padding: 0;    
 } 
-
-
 .proj{    
     
     top: 0;
     margin: 0;
     padding: 0;  
-    transition: all .2s; 
+    transition: all .2s;    
     width: 100%;
     height: 800px;    
     display: table;  
     max-width: 100%;  
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
     
 }
-
-
-
 .proj .text {
     position: relative;
     color: black;
@@ -426,9 +436,8 @@ main .introduce h1,main .introduce h2{
     width: 90%;
     margin: auto;   
 }
-
 .proj .text h1 {
-    font-size: 3.5rem;
+    font-size: calc(3.375rem + 2.5vw);
     font-weight: 600;
     line-height: .9;
     letter-spacing: -.04em;
@@ -437,7 +446,6 @@ main .introduce h1,main .introduce h2{
     text-decoration: none;
     color: black;
 }
-
 .proj .text p{
     text-align: justify;
 }
@@ -453,7 +461,6 @@ main .introduce h1,main .introduce h2{
     font-size: 3.5rem;
     padding: 5rem 0 0.5rem;    
 }
-
 .contact h1,.contact h6,.contact a{
     color: white;
 }
@@ -465,7 +472,6 @@ main .introduce h1,main .introduce h2{
     /* letter-spacing: -.02em; */
     text-decoration: none;
 }
-
 .contact ul{
     display: flex !important;
     justify-content: center;
@@ -474,10 +480,67 @@ main .introduce h1,main .introduce h2{
     padding: 0;
 
 }
-
 .contact ul li{
     list-style: none;
 }
+
+
+.intro{
+    height: 100vh;
+    background: rgb(24, 28, 37); 
+    display: table;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    position: absolute;
+    width: 100%;
+    
+    
+    
+   
+}
+.intro .ml11 {
+    display: table-cell;
+    font-size: calc(4.375rem + 2.5vw);
+    vertical-align: middle;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;    
+}  
+.intro .ml11 .text-wrapper {
+position: relative;
+display: inline-block;
+padding-top: 0.1em;
+padding-right: 0.05em;
+padding-bottom: 0.15em;
+}
+.intro .ml11 .line {
+opacity: 0;
+position: absolute;
+left: 0;
+height: 100%;
+width: 3px;
+background-color: #fff;
+transform-origin: 0 50%;
+}
+.intro .ml11 .line1 { 
+top: 0; 
+left: 0;
+}
+.intro .ml11 .letter {
+font-family: 'Square Peg', cursive;    
+display: inline-block;
+font-weight: 100;
+font-size: .4em;     
+letter-spacing: 0.3em;
+font-family: SuisseIntl-Light, "Helvetica Neue", Helvetica, Arial, sans-serif;
+color: white;
+line-height: 1em;
+}
+
+
+
+
 
 
 
