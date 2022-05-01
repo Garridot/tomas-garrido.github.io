@@ -5,7 +5,7 @@
 
 :root{
     --font-strong:    700;
-    --color-strong: #515769;
+    --color-strong: sandybrown;;
     --line-strong:    1.4;
 }
 
@@ -20,15 +20,14 @@ h1, h2, h3, h4, h5, h6 {
     font-family: Hind,sans-serif;   
     margin: 0 0 15px;    
 }
-h1, h2, h3, h4, h5, h6,p{
-    color: black;   
-    
+h1, h2, h3, h4, h5, h6,p{ color: black; }
+
+body{
+    background: rgb(24, 28, 37); 
 }
 
-a{
-    transition: all 0.1s;
-    
-}
+a{transition: all 0.1s;}
+
 a:hover{
     color: white;
     text-decoration: 5px underline !important;
@@ -138,12 +137,6 @@ nav ul li a{
     }
 } 
 
-
-
-
-
-
-
 @media(width:1130px){
     main .introduce h1{
         font-size: 9rem !important;        
@@ -173,13 +166,16 @@ nav ul li a{
         padding-left: .9rem;
     }
 
-    .perfil{
+    /* .perfil{
         display: flex !important;
-    }
+    } */
 
 
     .perfil,main{
         padding: 0 3rem !important;
+    }
+    .perfil .col{
+        width: 50%;
     }
     .perfil p#title{
         font-size: 6rem !important;
@@ -320,9 +316,28 @@ nav ul li a{
         font-size: 3rem !important;
     }
 
+    .projects{
+        margin-top: 15em !important;
+    }
+
     .proj{
         height: 600px !important;
     }
+
+    /* .proj:nth-child(2){
+        transform: translateY(500px) !important;
+    }
+    .proj:nth-child(3){
+        transform: translateY(1000px) !important;
+        
+    }
+    .proj:nth-child(4){
+        transform: translateY(1500px) !important;
+    }
+    .proj:nth-child(5){
+        transform: translateY(2000px) !important;
+    } */
+
 
     .proj .text{
         width: 90% !important;
@@ -363,23 +378,30 @@ main .introduce h1,main .introduce h2{
 
 
 .perfil{
-    padding:0 1rem;
+    padding:0 1rem ;
     height: 100vh;
     display: block;
     align-items: center;
+    margin-bottom: 2rem;
+    background: rgb(24, 28, 37); 
     
 }
 .perfil p#title{
     font-size: 3rem;
-    margin: 5rem 0;
+    /* margin: 5rem 0; */
     line-height: 1.1;
     font-weight: 600;
     word-spacing: 0.1em;
     letter-spacing: -.02em;
 }
 .perfil p{
-    font-size: 1rem;   
+    /* font-size: 1rem;   
     line-height: 1.55;
+    margin: 0 0 5rem; */
+    color: white;
+    font-size: 1.2rem;
+    line-height: 2;
+    letter-spacing: .1em;
     margin: 0 0 5rem;
 }
 .perfil .data  ul{
@@ -392,6 +414,7 @@ main .introduce h1,main .introduce h2{
     border-radius: 5px;
     margin:  0.5rem;
     padding: .2rem 1rem;
+    color: rgb(221, 221, 221);
     font-weight: var(--font-strong);    
     line-height: var(--line-strong);
 }
@@ -428,6 +451,30 @@ main .introduce h1,main .introduce h2{
     top: 0;
     
 }
+.proj:nth-child(1){
+    transform: translate3d(0, 0px, 0);
+    display: table-cell;
+    vertical-align: middle;
+}
+.proj:nth-child(2){
+    background: #c10000;
+    /* transform: translateY(800px); */
+}
+.proj:nth-child(3){
+    background: #A8DADC;
+    /* transform: translateY(1600px); */
+    z-index: 1;
+}
+.proj:nth-child(4){
+    background: #457B9D;
+    /* transform: translateY(2400px); */
+    z-index: 2;
+}
+.proj:nth-child(5){
+    background: #1D3557;
+    /* transform: translateY(3200px); */
+    z-index: 3;
+}
 .proj .text {
     position: relative;
     color: black;
@@ -454,7 +501,7 @@ main .introduce h1,main .introduce h2{
 
 
 .contact{
-    background: black;
+    
     height: 100vh;
 }
 .contact h1{
@@ -500,10 +547,13 @@ main .introduce h1,main .introduce h2{
     
    
 }
-.intro .ml11 {
-    display: table-cell;
-    font-size: calc(4.375rem + 2.5vw);
+.intro .pre{
     vertical-align: middle;
+    display: table-cell;
+    text-align: center;
+}
+.intro .ml11 {    
+    font-size: calc(4.375rem + 2.5vw);    
     font-weight: 700;
     text-align: center;
     width: 100%;    
@@ -541,8 +591,13 @@ line-height: 1em;
 
 
 
-
-
+.ml12{
+    font-weight: 200;
+    font-size: 1.5em;
+    letter-spacing: .3em;
+    color: gray;
+  }
+  
 
 
 

@@ -1,9 +1,6 @@
-
-
 var intro   = document.querySelector('.intro')
 var main    = document.querySelector('main')
 var section = document.querySelector('.content')
-
 section.style.display = 'none'
 
 window.addEventListener('load',()=>{
@@ -39,6 +36,27 @@ window.addEventListener('load',()=>{
     delay: 1000
     });
 
+    var textWrapper = document.querySelector('.ml12');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    anime.timeline({loop: false})
+    .add({
+      targets: '.ml12 .letter',
+      translateX: [-40,0],
+      translateZ: 0,
+      opacity: [0,1],
+      easing: "easeOutExpo",
+      duration: 1200,
+      delay: (el, i) => 2500 + 30 * i
+    }).add({
+      targets: '.ml12 .letter',
+      translateX: [0,30],
+      opacity: [1,1],
+      easing: "easeInExpo",
+      duration: 1100,
+      delay: (el, i) => 100 + 30 * i
+    });
+
   setTimeout(animation,2000)
   
   function animation(){   
@@ -46,8 +64,9 @@ window.addEventListener('load',()=>{
     section.style.display = 'block'    
     
   }
-})
-  
+})  
+
+
 
 var icon_menu = document.querySelector('.icon-menu')
 var menu      = document.querySelector('.menu')
@@ -59,21 +78,27 @@ icon_menu.addEventListener("click",function(){
 
 var nav = document.querySelector('#nav')
 
-window.addEventListener("wheel", function(e){  
+var lastScrollTop = 0;
 
-  if(e.wheelDelta >= 0){        
-      nav.style.top = "0" 
-      nav.style.transition= 'all .5s'         
-      nav.style.color = "white"      
-    
-  }else{
-      nav.style.top = "-6rem" 
-      nav.style.transition = 'all .5s'  
-    
+window.addEventListener("scroll", function(){ 
+
+  var st = window.pageYOffset || document.documentElement.scrollTop; 
+
+
+  if (st > lastScrollTop){    
+  nav.style.top = "-6rem" 
+  nav.style.transition = 'all .5s'
+  // downscroll code
+  }else{     
+  nav.style.top = "0" 
+  nav.style.transition= 'all .5s'         
+  nav.style.color = "white"    
+  // upscroll code
   }
-})
+  lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+}, false);
 
-
+    
 
 
 var projects  = document.querySelector('.projects')
@@ -93,31 +118,40 @@ projects.onwheel = function (e) {
 
 
 
-function setTransform(pointY) {  
 
-  project_1.style.transform = "translateY("+ pointY +"px)"
-  if (project_1.style.transform = "translateY(0px)"){ 
-    project_2.style.transform = "translateY("+ pointY +"px)";    
+function setTransform(pointY) { 
+  
+  // project_1.style.transform = "translateY(800px)" 
+  // project_1.style.transform = "translateY("+ pointY +"px)"  
+  
+  // if (project_1.style.transform = "translateY(0px)"){ 
+  //   project_2.style.transform = "translateY("+ pointY +"px)";    
     
-  }else{
-    project_1.style.transform = "translateY("+ pointY +"px)";
-  }
+  // }else{
+  //   project_1.style.transform = "translateY("+ pointY +"px)";
+  // }
 
-  if(project_2.style.transform = "translateY(120px)"){   
-    project_2.style.transform = "translateY(0px)";    
-  } 
+  // if(project_2.style.transform = "translateY(120px)"){   
+  //   project_2.style.transform = "translateY(0px)";    
+  // } 
 
 
-  if(project_3.style.transform = "translateY(120px)"){   
-    project_3.style.transform = "translateY(0px)";    
-  } 
-  if(project_4.style.transform = "translateY(120px)"){   
-    project_4.style.transform = "translateY(0px)";    
-  } 
+  // if(project_3.style.transform = "translateY(120px)"){   
+  //   project_3.style.transform = "translateY(0px)";    
+  // } 
+  // if(project_4.style.transform = "translateY(120px)"){   
+  //   project_4.style.transform = "translateY(0px)";    
+  // } 
 }      
 
 
-    
+
+
+
+
+
+
+
      
         
     
