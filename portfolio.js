@@ -42,7 +42,7 @@ window.addEventListener('load',()=>{
     anime.timeline({loop: false})
     .add({
       targets: '.ml12 .letter',
-      translateX: [-40,0],
+      translateX: [0,-40],
       translateZ: 0,
       opacity: [0,1],
       easing: "easeOutExpo",
@@ -50,7 +50,7 @@ window.addEventListener('load',()=>{
       delay: (el, i) => 2500 + 30 * i
     }).add({
       targets: '.ml12 .letter',
-      translateX: [0,30],
+      translateX: [30,0],
       opacity: [1,1],
       easing: "easeInExpo",
       duration: 1100,
@@ -75,6 +75,19 @@ icon_menu.addEventListener("click",function(){
     icon_menu.classList.toggle('clicked')
     menu.classList.toggle('view') 
 })
+
+
+var menu_li = [...menu.querySelectorAll('li')] 
+
+menu_li.forEach(li => {
+
+  li.addEventListener("click",function(){
+    icon_menu.classList.toggle('clicked')
+    menu.classList.toggle('view')
+  })
+
+});
+
 
 var nav = document.querySelector('#nav')
 
@@ -116,9 +129,6 @@ projects.onwheel = function (e) {
 }
 
 
-
-
-
 function setTransform(pointY) { 
   
   // project_1.style.transform = "translateY(800px)" 
@@ -142,7 +152,13 @@ function setTransform(pointY) {
   // if(project_4.style.transform = "translateY(120px)"){   
   //   project_4.style.transform = "translateY(0px)";    
   // } 
-}      
+} 
+
+
+
+
+
+
 
 
 
