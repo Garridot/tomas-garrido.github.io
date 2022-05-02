@@ -384,6 +384,8 @@ main .introduce h1,main .introduce h2{
     align-items: center;
     margin-bottom: 2rem;
     background: rgb(24, 28, 37); 
+    margin-bottom: 10rem
+    ;
     
 }
 .perfil p#title{
