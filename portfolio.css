@@ -383,9 +383,7 @@ main .introduce h1,main .introduce h2{
     display: block;
     align-items: center;
     margin-bottom: 2rem;
-    background: rgb(24, 28, 37); 
-    margin-bottom: 10rem
-    ;
+    background: rgb(24, 28, 37);     
     
 }
 .perfil p#title{
@@ -445,11 +443,10 @@ main .introduce h1,main .introduce h2{
 
 .projects{    
     display: flex;
-    flex-direction: column; 
-    
+    flex-direction: column;     
     width: 100%;
     margin: 0;   
-    padding: 0;    
+    padding: 0;  
 } 
 .proj{    
     
@@ -468,6 +465,7 @@ main .introduce h1,main .introduce h2{
 }
 .proj:nth-child(1){
     transform: translate3d(0, 0px, 0);       
+    margin-top: 10rem;
 }
 .proj:nth-child(1) .text{
     display: table;
