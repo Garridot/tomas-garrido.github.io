@@ -180,6 +180,7 @@ nav ul li a{
     .perfil p#title{
         font-size: 6rem !important;
     }
+    
 
     .proj .text {        
         flex: 0 0 auto;
@@ -247,6 +248,10 @@ nav ul li a{
     }
     .perfil p#title{
         font-size: 6rem !important;
+    }
+
+    .perfil .img{
+        display: none;
     }
 
 
@@ -403,6 +408,17 @@ main .introduce h1,main .introduce h2{
     line-height: 2;
     letter-spacing: .1em;
     margin: 0 0 5rem;
+}
+.perfil .row{
+    align-items: baseline;
+}
+.perfil .img{
+    text-align: center;
+    filter: opacity(0.9);
+}
+.perfil .img img{
+    width: 60%;
+    filter: saturate(0.5);
 }
 .perfil .data  ul{
     padding: 0;
