@@ -174,7 +174,7 @@ nav ul li a{
     .perfil,main{
         padding: 0 3rem !important;
     }
-    .perfil .col{
+    .perfil .first{
         width: 50%;
     }
     .perfil p#title{
@@ -204,7 +204,7 @@ nav ul li a{
     }
 
     .proj .text a:hover{
-        text-decoration:underline 10px !important ;
+        text-decoration: none white 10px !important ;
     }
 
 
@@ -328,21 +328,11 @@ nav ul li a{
     .proj{
         height: 600px !important;
     }
-
-    /* .proj:nth-child(2){
-        transform: translateY(500px) !important;
-    }
-    .proj:nth-child(3){
-        transform: translateY(1000px) !important;
+   
+    span.s_2{
+        color: black !important;
         
     }
-    .proj:nth-child(4){
-        transform: translateY(1500px) !important;
-    }
-    .proj:nth-child(5){
-        transform: translateY(2000px) !important;
-    } */
-
 
     .proj .text{
         width: 90% !important;
@@ -410,7 +400,7 @@ main .introduce h1,main .introduce h2{
     margin: 0 0 5rem;
 }
 .perfil .row{
-    align-items: baseline;
+    align-items: center;
 }
 .perfil .img{
     text-align: center;
@@ -527,6 +517,17 @@ main .introduce h1,main .introduce h2{
     text-decoration: none;
     color: black;
 }
+
+
+span.s_1{
+    color: black;
+    /* text-decoration:underline 5px !important;  */
+}
+span.s_2{
+    color: white;
+    /* text-decoration:underline white 5px !important; */
+}
+
 .proj .text p{
     text-align: justify;
 }
