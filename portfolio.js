@@ -45,21 +45,22 @@ window.addEventListener("scroll", function(){
 
   
 var id_projects  = document.querySelector('#projects')
-// id_projects.addEventListener("onwheel", function(){
-//   alert('kjhkhj')
-// })
+
 
 window.addEventListener("scroll", function(){
   var st = window.pageYOffset || document.documentElement.scrollTop; 
-  if(800 < st ){
+  if(1000 < st ){
        
     document.querySelector('header').style.background  = '#111' 
-    document.querySelector('header').style.color    = '#aaa';
+    document.querySelector('header').style.color    = '#aaa'
+    
+   
     
   }else{
     document.querySelector('header').style.background = 'transparent'    
-    document.querySelector('header').style.color    = '#666'    
+    document.querySelector('header').style.color    = '#666'      
   }
+  
 })
 
 
@@ -76,8 +77,8 @@ window.onscroll = function (e) {
 
   
 
-  carousel.querySelector('.backend').style.transform = "translate3d(1000px,  10px, 10px)"  
-  var pointY2 = -1000 - Math.max(50 - 0.4*window.scrollY)
+  carousel.querySelector('.backend').style.transform = "translate3d(500px,  10px, 10px)"  
+  var pointY2 = -500 - Math.max(50 - 0.4*window.scrollY)
   carousel.querySelector('.backend').style.transform = "translate3d("+ pointY2 +"px,  10px, 10px)"
   
   
