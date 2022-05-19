@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <link rel="icon" href="t.png">   
-    <title>Tomas Garrido | Web Developer</title>
+    <title>Tomas Garrido | Python Developer</title>
 
     
     <script src="https://kit.fontawesome.com/47100a983e.js" crossorigin="anonymous"></script>
@@ -16,160 +16,170 @@
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <script src="https://kit.fontawesome.com/47100a983e.js" crossorigin="anonymous"></script>
     <!-- Css -->
-    <link rel="stylesheet" href="portfolio.css" >     
-    
-    
+    <link rel="stylesheet" href="portfolio.css" >    
 </head>
-
-<body>
-    <div class="intro">
-        <div class="pre">
-            <h1 class="ml11">
-                <span class="text-wrapper">
-                  <span class="line line1"></span>
-                  <span class="letters">Tomas Garrido</span>
-                </span>
-            </h1>  
-            <h1 class="ml12">                
-                  <span class="letters">Web Developer</span>                  
-                </span>
-              </h1>       
-        </div>
-       
-    </div>
-
-    
-      
-    
-
-    <main>
-        <nav id="nav" class="animate__animated animate__fadeIn animate__delay-2s animate__slow">           
-            <h2>Tomas Garrido</h2>
+<body>    
+    <header  id="nav">
+        <nav>
+            <div class="title-nav">
+                <h5>Tomas</h5>
+                <h5>Garrido</h5>
+            </div>            
             <div class="icon-menu">
                 <i class="fas fa-ellipsis-v"  aria-hidden="true"></i>
             </div>
-            
-            <ul class="menu">
-                <li><a href="#perfil">Perfil</a></li>
-                <li><a href="#projects">Projectos</a></li>
+            <ul class="list-nav">
+                <li><a href="#">Perfil</a></li>
+                <li><a href="#">Proyectos</a></li>
                 <li><a href="#contact">Contacto</a></li>                
             </ul>
         </nav>
-        <div class="introduce" >
-                <h2 class="pb-3" >Web Developer</h2>
+    </header>
+    <main class="row">
+        <div class="text col">
+            <div class="t-main">
+                <h1>Tomas Garrido</h1>
+                <h2>Python Developer</h2>                
+                <p>
+                    Web developer junior especializado en Python.
+                </p>                
+            </div>
         </div>
-            
-    </main>
-    <div class="content">
-        <section class="perfil" id="perfil"  data-aos="zoom-in"  data-aos-duration="1000">     
-            <div class="first" >                
-                    <span class="col">
-                        <p id="title">Sobre me</p>
+        <div class="t-img col">            
+            <img src="media/2_3_2.png" class="img-fluid">
+        </div>
+    </main>    
+    <section class="perfil">
+        <div class="row">
+            <div class="per-title col-4">
+                <span>
+                    <p>Perfil</p>
+                </span>
+            </div>    
+            <div class="per-text col">
+                <p class="per-p" data-aos="fade-up">
+                    Hola soy Tomás Garrido, junior Python developer con sede en Argentina. 
+                    Empece a los 19 años a estudiar Desarrollo Web de forma autodidacta. 
+                    Enfocado en Python, tome cursos en Udemy, Cursera, tutoriales en línea, etc. 
+                    Con el tiempo, logre crear proyectos para mejorar y mostrar los conocimientos aprendidos.               
+                </p>
+                <div class="cv">
+                    <a class="a" href="https://drive.google.com/drive/folders/1HmrBV_xrOeHjZaHB4nYp-RfnWHS2aSlu?lfhs=2">Ver Curriculum</a> 
+                </div>                
+            </div>            
+        </div>  
+        
+    </section> 
+
+    <section class="carousel">
+        <div class="end">
+            <div class="label-front">
+                <p>Frontend</p>
+            </div>
+            <h1 class="frontend">Html-css-bootstrap</h1>
+        </div>
+        <div class="end" style="text-align: end;">
+            <div class="label">
+                <p>Backend</p>
+            </div>
+            <h1 class="backend">Python-Django-Sql</h1>
+        </div>
+    </section>
+
+    
+
+    <section id="projects">
+        <div class="proj-title">
+            <p>Projectos</p>
+        </div>
+        
+        
+        <div class="container-projs">            
+            <div class="proj row" style="--i:0" data-aos="fade-up">
+                <div class="proj-img col-5">
+                    <a href=""><img src="media/Api-min.png" alt="" class="img-fluid">
+                    </a>
+                </div>                        
+                <div class="proj-info col-5">
+                    <h3>Players Stats Api</h3>
+                    <span class="proj-text">
                         <p>
-                            Hola! soy <strong>Tomas Garrido, Web Developer.</strong>
-                            Programador especializado en <strong>Python</strong>, empecé a aprender sobre desarrollo
-                            web por mi cuenta. Con el tiempo,<strong> empecé a hacer proyectos para mejorar y
-                            mostrar los conocimientos aprendidos.</strong>
-                        </p> 
+                            API que guarda estadísticas de jugadores de fútbol. La API obtiene sus datos
+                            mediante Web Scraping. El Web Scraping se realiza mediante tareas asíncronas.
+                        </p>
                     </span>
-                <
-                <div class="data col mb-5" > 
-                    <ul class="d-flex ">
-                        <li >Html</li>
-                        <li>Css</li>
-                        <li >Javascript</li>    
-                    </ul>
-                    <ul class="d-flex ">
-                        <li >Python</li>
-                        <li >Django / Dajngo Rest</li>
-                        <li>SQL</li>
-                    </ul>
-                </div> 
-            </div>        
-            <div class="second d-grid gap-2">
-                <a href="https://drive.google.com/file/d/1thb1Q_mR4FYDxqSg_-T39eEl0qjyh9ns/view">Ver Curriculum</a>
+                </div>                   
             </div>
-                    
-        </section>    
-    
-        <section class="projects" id="projects">
-    
-            <div class="proj _main" style="transform: translate3d(0, 0px, 0);  display: table-cell; vertical-align: middle;" >            
-                <div class="text">
-                    <h1 style="color: white;text-align: center;font-size: calc(4.375rem + 2.5vw) !important;">Proyectos</h1>                
+
+            <div class="proj row" style="--i:1" data-aos="fade-up">
+                <div class="proj-img col-5">
+                    <a href=""><img src="media/inflation_calculator.png" alt="" class="img-fluid">
+                    </a>
                 </div>
+                <div class="proj-info col-5">
+                    <h3>Calculadora de inflación</h3>
+                    <span class="proj-text">
+                        <p>
+                            Calculadora que muestra el valor de un determinado monto a través del tiempo
+                            con base en la inflación y al índice de precios al consumidor (IPC).
+                        </p>
+                    </span>
+                </div>                   
+            </div>
+            <div class="proj row" style="--i:3" data-aos="fade-up">
+                <div class="proj-img col-5">
+                    <a href=""><img src="media/web_academy.jpg" alt="" class="img-fluid">
+                    </a>
+                </div>
+                <div class="proj-info col-5">
+                    <h3>Academia Web</h3>
+                    <span class="proj-text">
+                        <p>
+                            Página web donde los alumnos podrán visualizar cursos, material de aprendizaje,
+                            eventos, recibir y enviar tareas que publiquen los profesores.
+                        </p>
+                    </span>
+                </div>                   
+            </div>
+            <div class="proj row" style="--i:4" data-aos="fade-up">
+                <div class="proj-img col-5">
+                    <a href=""><img src="media/compare-difference.png" alt="" class="img-fluid">
+                    </a>
+                </div>
+                <div class="proj-info col-5">
+                    <h3>Compare Difference</h3>
+                    <span class="proj-text">
+                        <p>Página web donde podrá encontrar las diferencia entre dos archivos de texto.</p>
+                    </span>
+                </div>                   
             </div>
             
-            <div class="proj" id="_1" >            
-                <div class="text">
-                    <h1><a href="https://football-players-stats-api.herokuapp.com/">
-                        <span class="s_1">Player </span>
-                        <span class="s_2">Stats Api</span>                        
-                        </a>
-                    </h1>
-                    <p>
-                        API que guarda estadísticas de jugadores de fútbol. La API obtiene sus datos
-                        mediante Web Scraping. El Web Scraping se realiza mediante tareas asíncronas.
-                    </p>
-                </div>
-            </div>
-            <div class="proj" id="_2">            
-                <div class="text">
-                    <h1><a href="">
-                        <span class="s_1">Calculadora </span>
-                        <span class="s_2">de inflación</span>
-                        </a>
-                    </h1>
-                    <p>
-                        Calculadora que muestra el valor de un determinado monto a través del tiempo
-                        con base en la inflación y al índice de precios al consumidor (IPC).
-                    </p>
-                </div>
-            </div>
-            <div class="proj" id="_3">           
-                <div class="text">
-                    <h1><a href="https://web-academy-heroku.herokuapp.com/">
-                        <span class="s_1">Web </span>
-                        <span class="s_2">Academy</span>
-                        </a> 
-                    </h1>
-                    <p>
-                        Página web donde los alumnos podrán visualizar cursos, material de aprendizaje,
-                        eventos, recibir y enviar tareas que publiquen los profesores
-                    </p>
-                </div>
-            </div>
-            <div class="proj" id="_4">
-                <div class="text" >
-                    <h1><a href="https://compare-difference.herokuapp.com/">                        
-                        <span class="s_2">Compare </span>
-                        <span class="s_2">Difference</span>
-                        </a>
-                    </h1>
-                    <p  style="color: white;">
-                        Página web donde podrá encontrar las diferencia entre dos archivos de texto
-                    </p>
-                </div>
-            </div>
-        </section>
-    
-    
-        <section class="contact row m-0"  data-aos="zoom-in-up" id="contact">
-            <h1>Contacto</h1>
-            <div class="data">
-                <ul>
-                    <li><a href="mailto:garridot210@gmail.com">Email</a></li>
-                    <li><a href="https://www.linkedin.com/in/tomas-garrido/">LinkedIn</a></li>
-                    <li><a href="https://github.com/Garridot">Github</a></li>
-                    <li><a href="">Website</a></li>
-                </ul>            
-            </div>
-        </section>    
-    </div> 
-    
+        </div> 
+
+        
+    </section>
+
+    <div id="contact" data-aos="fade-up">
+        <div class="cont-info">
+            <h5>Contacto</h5>
+            <p>Si esta interesado/a en mi perfil, sientase libre de contactarme.</p>            
+        </div>
+        
+    </div>
+
+    <footer data-aos="fade-up">        
+        <ul class="f-ul">
+            <li class="f-li"><a href="">Email</a></li>
+            <li class="f-li"><a href="">LinkedIn</a> </li>
+            <li class="f-li"><a href="">Github</a></li>            
+        </ul>
+        <div class="f-text">
+            <h6>© Copyright 2022 Tomas Garrido. All rights reserved.</h6>
+        </div>
+    </footer>
 </body>
-<img src="Portofolio.png" class="img-fluid  d-none"  alt="">
 
 
 
@@ -178,7 +188,18 @@
 <!-- Js -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init();</script>
+
+<script>
+    AOS.init();
+</script>
+
+<script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+<script type="text/javascript">
+    ScrollOut({
+        targets:'.per-p,.label-front,.cv'
+    })
+</script>
 <script src="portfolio.js"></script>
 </html>
