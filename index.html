@@ -20,7 +20,7 @@
     <!-- Css -->
     <link rel="stylesheet" href="portfolio.css" >    
 </head>
-<body>    
+<body style="overflow-x: hidden;">    
     <header  id="nav" >
         <nav>
             <div class="title-nav">
@@ -48,7 +48,7 @@
             </div>
         </div>
         <div class="t-img col">            
-            <img src="media/2_3_2.png" class="img-fluid">
+            <img src="media/2_3_2.png" class="img-fluid" id="n_1">
         </div>
     </main>    
     <section class="perfil" id="perfil">
@@ -59,11 +59,14 @@
                 </span>
             </div>    
             <div class="per-text col">
-                <p class="per-p" data-aos="fade-up">
-                    Hi, I’m Tomas Garrido, junior Python developer based in Argentina. 
-                    At the age of 19, I started learning about web development for myself. 
-                    Focused on Python, I took courses in Udemy, Cursera, online tutorials, etc. 
-                    Now, I’m looking for my first work experience to show  and improve  the knowledge learned.                  
+                <p class="per-p" data-aos="fade-up"> 
+                    Hi, I'm Tomas Garrido, a Web Developer based in Argentina focused on the language Python. 
+                    I started to learn about web development on my own while I was studying for a 
+                    business administration career for over 2 years. 
+                    I learned on the frontend about HTML, CSS, and JavaScript, in particular,
+                    the use of fetch and how to call an API. On the backend, the use of ORM or
+                    how to engage with the database and make queries. 
+                    Serialize data, in the case it was an API. 
                 </p>
                 <div class="cv">
                     <a class="a" href="https://drive.google.com/file/d/1nGJw5TTPLJT-9ysNjEKlKp1DST_8tHdY/">View my resume</a> 
@@ -78,13 +81,13 @@
             <div class="label-front">
                 <p>Frontend</p>
             </div>
-            <h1 class="frontend">Html-css-bootstrap</h1>
+            <h1 class="frontend">Html-css-js-bootstrap</h1>
         </div>
         <div class="end" style="text-align: end;">
             <div class="label-back">
                 <p>Backend</p>
             </div>
-            <h1 class="backend" style="padding-top: 5rem">Python-Django-Sql</h1>
+            <h1 class="backend" style="padding-top: 5rem">Python-Django/rest-Sql</h1>
         </div>
     </section>
 
@@ -93,33 +96,30 @@
     <section id="projects">
         <div class="proj-title">
             <p>Projects</p>
-        </div>
+        </div>  
         
         
         <div class="container-projs">            
             <div class="proj row" style="--i:0" data-aos="fade-up">
                 <div class="proj-img col-5">
-                    <a href="https://football-players-stats-api.herokuapp.com/"><img src="media/Api-min.png" alt="" class="img-fluid">
+                    <a href="https://football-player-graphics.herokuapp.com/"><img src="/media/project_1.png" alt="" class="img-fluid">
                     </a>
                 </div>                        
                 <div class="proj-info col-5">
-                    <h3>Players Stats Api</h3>
+                    <h3>FOOTBALL PLAYER CHARTS</h3>
                     <span><p style="color: #aaa;">
-                        <strong>Python - Django Rest - Redis - Pandas - BeautifulSoup4</strong>
+                        <strong>Python - Django Rest - Pandas - BeautifulSoup4</strong>
                     </p></span>
                     <span class="proj-text">
                         <p>                            
-                            API that saves statistics about football players. 
-                            The API gets its data through Web Scraping. 
-                            Scraping is done by asynchronous tasks.
+                            Football Player Charts is a football statistics website where you will find information, statistics, and charts that show how influenced a player in each team he played.
                         </p>
                     </span>
                 </div>                   
             </div>
-
             <div class="proj row" style="--i:1" data-aos="fade-up">
                 <div class="proj-img col-5">
-                    <a href="https://inflation-calculator-arg-x4iu.onrender.com/"><img src="media/inflation_calculator.png" alt="" class="img-fluid">
+                    <a href="https://inflation-calculator-arg-x4iu.onrender.com/"><img src="/media/project_2.png" alt="" class="img-fluid">
                     </a>
                 </div>
                 <div class="proj-info col-5">
@@ -169,12 +169,13 @@
                         </p>
                     </span>
                 </div>                   
-            </div>
-            
-        </div> 
+            </div>            
+        </div>
 
         
     </section>
+
+    
 
     <div id="contact" data-aos="fade-up">
         <div class="cont-info">
@@ -209,6 +210,48 @@
 <script>
     AOS.init();
 </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollToPlugin.min.js"></script>
+
+<script>
+    gsap.from('#n_1',{
+        scrollTrigger:{
+            scrub: true
+        },
+        y:0,
+    }) 
+    
+</script>
+
+<!-- <script>
+    gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
+
+    /* Main navigation */
+    let panelsSection = document.querySelector(".panels"),
+        panelsContainer = document.querySelector(".projects-panel"),
+        tween;
+
+    /* Panels */
+    const panels = gsap.utils.toArray(".projects-panel .project");
+    tween = gsap.to(panels, {
+        xPercent: -100 * ( panels.length - 1 ),
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".projects-panel",
+            pin: true,
+            start: "top top",
+            scrub: 1,
+            snap: {
+                snapTo: 1 / (panels.length - 1),
+                inertia: false,
+                duration: {min: 0.1, max: 0.1}
+            },
+            end: () =>  "+=" + (panelsContainer.offsetWidth - innerWidth)
+        }
+    });
+</script> -->
 
 <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
 <script type="text/javascript">

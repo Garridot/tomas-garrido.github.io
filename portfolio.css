@@ -312,8 +312,8 @@ section{
 } 
 .per-text p{
     margin-bottom: 3rem;
-    font-size: 1.8em;
-    line-height: 1.6em;   
+    font-size: 1.4em;
+    line-height: 1.8em;
     letter-spacing: 2px;
     font-family: 'adobe-garamond-pro', Georgia, "Times New Roman", serif;    
 }
@@ -430,7 +430,7 @@ section{
     color: var(--i_color);
     font-weight: 600;
     white-space: nowrap;  
-    font-size: 5.9rem;
+    font-size: 4rem;
     font-family: Bebas Neue,sans-serif;    
     letter-spacing: -.025em;
 }
